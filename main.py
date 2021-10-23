@@ -1,8 +1,6 @@
 import requests
 from colorama import Fore
 from os import *
-
-print(Fore.CYAN, """""")
 token = input(Fore.GREEN + "Insert A Token: ")
 
 req = requests.get("https://discord.com/api/v9/users/@me", headers = {"authorization": token})
@@ -18,5 +16,6 @@ if not 'message' in user:
 [EMAIL]: {user["email"]}
 [Phone ?]: {user["phone"]}
 [Biographie]: {user["bio"]}
-[Token]: {token}""", Fore.WHITE)
+[Token]: {token}
+[By Not.Fubukii]""", Fore.WHITE)
 else: print(Fore.RED,"INVALID TOKEN", Fore.WHITE)
